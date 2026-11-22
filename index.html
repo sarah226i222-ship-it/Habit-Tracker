@@ -228,7 +228,7 @@ body.reduced .rv{opacity:1;transform:none}
 .gcell.l1{background:var(--c-low)}.gcell.l2{background:var(--leaf2)}.gcell.l3{background:var(--deep)}
 .gcell.today{outline:3px solid var(--gold);outline-offset:1px}
 </style>
-<script defer="" data-domain="purple-corissa-60-cb8bff.tiiny.site" src="https://analytics.tiiny.net/js/plausible.js"></script></head>
+</head>
 <body>
 
 <div class="app-header">
@@ -413,7 +413,7 @@ const firebaseConfig = {
 };
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
-const SECRET = "my-garden-2026-kimi-private-key";
+const SECRET = "demo-garden-2026";
 const trackerRef = doc(db, "gardens", SECRET, "trackerData", "main");
 let firstSnapshot = false;
 
@@ -421,86 +421,16 @@ let firstSnapshot = false;
 // Data & defaults (من V2)
 // ═══════════════════════════════════════════════════
 const DEFAULT_HABITS = [
-  { emoji:'🕌', id:'h1', name:'500 استغفار ، 500 صلاه على النبي', goal:'٥٠٠', category:'روحانية' },
-  { emoji:'😴', id:'h2', name:'لما اصحى من النوم🛏️ اغير ملابس ، و احط ديودرنت ، و اعمل اسكين كير ، في حاله اني محتاجه « ترويقه الصباح »', goal:'-', category:'صحة' },
-  { emoji:'💇🏻‍♀️', id:'h3', name:'اسرح شعري 🪮💇🏻‍♀️', goal:'-', category:'صحة' },
-  { emoji:'💇🏻‍♀️', id:'h4', name:'اعمل مساج لشعري 🪮💇🏻‍♀️ | لمده 4 د |بالاصابع مش الاظافر', goal:'4 د', category:'صحة' },
-  { emoji:'🦷', id:'h5', name:'اغسل سناني |صباحي', goal:'-', category:'صحة' },
-  { emoji:'🦷', id:'h6', name:'اغسل اسناني في نهايه اليوم', goal:'-', category:'صحة' },
-  { emoji:'🕌', id:'h7', name:'حضور اجتماع تعافي | او اسمع SPEACH', goal:'-', category:'روحانية' },
-  { emoji:'😴', id:'h8', name:'انام على الساعة 1 بالليل', goal:'-', category:'صحة' },
-  { emoji:'🌸', id:'h9', name:'اقرأ صفحة من سورة البقره عشان تركها حسره وكده', goal:'-', category:'نفسية' },
-  { emoji:'📖', id:'h10', name:'القرآن ورد الحفظ تكرار في اليوم', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h11', name:'ورد القرآن الكريم حفظ آيه', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h12', name:'ورد القراه القرآن', goal:'-', category:'روحانية' },
-  { emoji:'🌸', id:'h13', name:'اكراتين و مرطب', goal:'-', category:'نفسية' },
-  { emoji:'🕌', id:'h14', name:'مثمر | الاستغفار | الصلاه على النبي |أذكار المساء |أذكار النوم | الدعاء الثبات', goal:'-', category:'روحانية' },
-  { emoji:'🌸', id:'h15', name:'اشتغل شغل الخطواط 12', goal:'-', category:'نفسية' },
-  { emoji:'🥗', id:'h16', name:'اكل لقمه على قد ثلاث صباعت ، و نص الملعقة .', goal:'-', category:'صحة' },
-  { emoji:'🥗', id:'h17', name:'ما اكل إلا لما اجوع', goal:'-', category:'صحة' },
-  { emoji:'🥗', id:'h18', name:'لا اكل و انا بتفرج على شيء | مرتين في اليوم من اصل 3', goal:'مرتين', category:'صحة' },
-  { emoji:'✅', id:'h19', name:'اراجع قائمة المهام الاسبوعية', goal:'-', category:'إنتاجية' },
-  { emoji:'🌸', id:'h20', name:'قُلْ يا معاذُ اللَّهمَّ مالِكَ الملْكِ تُؤتي الملكَ من تشاءُ...', goal:'-', category:'نفسية' },
-  { emoji:'🤲', id:'h21', name:'دعاء الثابات 2 | يا مقلب القلوب | الثبات في الامر', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h22', name:'اسمع تفسير القرآن من السبت الى الاثلاثاء | و من الاربعاء الى الجمعة عبلة لاشين', goal:'-', category:'روحانية' },
-  { emoji:'🕌', id:'h23', name:'اسبح بعد الصلاه', goal:'-', category:'روحانية' },
-  { emoji:'🕌', id:'h24', name:'ادعي ان ربنا يخلي الصلاه قره عين لي', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h25', name:'دعاء فتنه المسيخ الدخال', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h26', name:'ادعي ربنا اني ارى النبي و سيدنا ابو بكر | ادعي في السجود', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h27', name:'ادعي دعاء القرآن | اللهم اجعل القرآن الكريم ربيع قلوبنا ، ونور ابصارنا', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h28', name:'دعاء فتنه المحيا و الممات', goal:'-', category:'روحانية' },
-  { emoji:'🕌', id:'h29', name:'صلاه الفجر في ميعاده', goal:'-', category:'روحانية' },
-  { emoji:'🕌', id:'h30', name:'اصلي سنه الفجر', goal:'-', category:'روحانية' },
-  { emoji:'🕌', id:'h31', name:'اصلي صلاه وتر فيها 10 آيات مراجعه ،', goal:'10 آيات', category:'روحانية' },
-  { emoji:'🏠', id:'h32', name:'اعمال منزلية', goal:'-', category:'إنتاجية' },
-  { emoji:'📖', id:'h33', name:'اسلم لله في القرآن و الرياضة ، و المذاكرة و العريس', goal:'-', category:'روحانية' },
-  { emoji:'📚', id:'h34', name:'اذاكر| اموال تنفق في سبيل الله | لو ما ذاكرت اكتب لي', goal:'-', category:'إنتاجية' },
-  { emoji:'💞', id:'h35', name:'اشارك مع هايدي المايلستون بتاعه التندو ليست حتى لو مش بترد عليا', goal:'-', category:'شخصي' },
-  { emoji:'📿', id:'h36', name:'اقول سبحان ربي العظيم ، 15 مره في الركوع', goal:'15 مره', category:'روحانية' },
-  { emoji:'🤲', id:'h37', name:'ادعي اني اكون من اولياء الله الصالحين', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h38', name:'دعاء ربي اني لما انزلت الي من خير فقير', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h39', name:'دعاء اللهم اني اسئلك الجنه | 3 مرات في اليوم', goal:'3 مرات', category:'روحانية' },
-  { emoji:'📚', id:'h40', name:'اعمل مشاركة لمده شهر عن المذاكر | البدايه 16/8/2026', goal:'-', category:'إنتاجية' },
-  { emoji:'🌸', id:'h41', name:'اكتب انا استفت ايه من الايه ده', goal:'-', category:'نفسية' },
-  { emoji:'📚', id:'h42', name:'اقدم خدمه في الزمالة |او افعالالحب', goal:'-', category:'إنتاجية' },
-  { emoji:'💧', id:'h43', name:'احط القطرة مرتين في اليوم', goal:'مرتين', category:'صحة' },
-  { emoji:'🤲', id:'h44', name:'اسم لربنا لمده شهر موضوع الاكل بدون تلفزيون : البدايه 18/8/2026', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h45', name:'احط نوايا ال6 الاساسين و نوايا القرآن و الذكر و كل حاجه في بداية اليوم', goal:'-', category:'روحانية' },
-  { emoji:'💧', id:'h46', name:'اشرب كوب مياه اول ما اصحى من النوم', goal:'-', category:'صحة' },
-  { emoji:'💧', id:'h47', name:'اشرب برطمان 500 ملل في اليوم وبعد شهر يكون 2 برطمان . البداية 20/8/2026', goal:'500 ملل', category:'صحة' },
-  { emoji:'💞', id:'h48', name:'هل انا رصينه لليوم |يتم التسجيل الساعه 11 بالليل', goal:'-', category:'شخصي' },
-  { emoji:'🤲', id:'h49', name:'اسلم لله ان سارة تعمل شغل في البيت واحدده ليها قبلها ، و ادعي ربنا انها تعمله', goal:'-', category:'روحانية' },
-  { emoji:'🏠', id:'h50', name:'ارش مبيد حشري في المطبخ و الحمام لمده شهر او 3 شهور', goal:'-', category:'إنتاجية' },
-  { emoji:'📚', id:'h51', name:'اكتب في الدراسة انا وقفت فين و مع انهي اكونت ai ، مع هايدي', goal:'-', category:'إنتاجية' },
-  { emoji:'🥗', id:'h52', name:'تغسل الطبق اللي اكل فيه', goal:'-', category:'صحة' },
-  { emoji:'🕌', id:'h53', name:'اثبت ميعاد بدايه المذاكرة من الساعه 6 بالليل لحد الساعه 2 الفجر', goal:'-', category:'روحانية' },
-  { emoji:'📵', id:'h54', name:'اتعود ان اقفل تيليفوني على home screen', goal:'-', category:'صحة' },
-  { emoji:'📚', id:'h55', name:'اعمل check على حته Assignments بتاعت DEPI', goal:'-', category:'إنتاجية' },
-  { emoji:'💞', id:'h56', name:'اني اعمل ريكورد الهايدي في توقعات بكره للتلست بتاعتي', goal:'-', category:'إنتاجية' },
-  { emoji:'🤲', id:'h57', name:'ادعي لساره ورضوى وبابا وماما وايدي وبسنت', goal:'-', category:'روحانية' },
-  { emoji:'🌸', id:'h58', name:'البس النظارة', goal:'-', category:'نفسية' },
-  { emoji:'🧘‍♀️', id:'h59', name:'افرد ظهري و انا قعده', goal:'-', category:'صحة' },
-  { emoji:'🕌', id:'h60', name:'اصلي بالفتاحه بتركيز في ركعتين في صلاه مرتين', goal:'مرتين', category:'روحانية' },
-  { emoji:'📚', id:'h61', name:'اسلم لله بدايه السشين ، و في البريك اسلمه لله', goal:'-', category:'إنتاجية' },
-  { emoji:'📵', id:'h62', name:'اول 3 ساعات من اليوم ما المس السوشيال مديا', goal:'3 ساعات', category:'صحة' },
-  { emoji:'🤲', id:'h63', name:'اسلم لربنا اني اطلع فوق في المكتب من اول اليوم : 6/9/2026 → 5/10/2026', goal:'-', category:'روحانية' },
-  { emoji:'📚', id:'h64', name:'مراجعه 10 د من التوكيادت | دائرة النمو', goal:'10 د', category:'إنتاجية' },
-  { emoji:'📚', id:'h65', name:'مراجعه ورد الحفظ الجديد مرتين في اليوم اول بريك', goal:'مرتين', category:'إنتاجية' },
-  { emoji:'💧', id:'h66', name:'الوضوء قبل النوم | بيسهل الاستيقاظ للفجر', goal:'-', category:'روحانية' },
-  { emoji:'📖', id:'h67', name:'تدبر القرآن على 3 فترات | تذكر القرآن على مدار اليوم', goal:'-', category:'روحانية' },
-  { emoji:'📿', id:'h68', name:'أذكار النوم', goal:'-', category:'روحانية' },
-  { emoji:'📿', id:'h69', name:'حرز صباحي | طرد نزغ الشيطان من المساء', goal:'-', category:'روحانية' },
-  { emoji:'📿', id:'h70', name:'حرز مسائي | طرد نزغ الشيطان من الليلة', goal:'-', category:'روحانية' },
-  { emoji:'🌸', id:'h71', name:'اقف ثواني و اركز انا معايا اي و وصلت لأيه بفضل الله و امتن له', goal:'-', category:'نفسية' },
-  { emoji:'🤲', id:'h72', name:'دعاء اني ابطل احب مارفيل | عشان احب الله و احس بيه', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h73', name:'ادعي ربنا اني الاقي حل لمشكلة بابا الماديه', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h74', name:'ادعي ربنا اني | اكفل ايتام | ابني مسجد | اكفل ارامل | ابني بير مياه', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h75', name:'ربنا أتنا من لدنك رحمه و هيء لنا من امرنا رشدا', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h76', name:'يارب اتعين في شركة عالية زي نون | يارب احج يوم عرفه | يارب بغنا قيام و صيام رمضان', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h77', name:'ادعي : اللهم اجعلنا من المحسنين ؛ للذين احسنوا الحُسنى و زياده', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h78', name:'ادعي ربنا انه يكون دائما على بالي و اني استعين بيه و اسئله هو', goal:'-', category:'روحانية' },
-  { emoji:'🤲', id:'h79', name:'ادعي يا رب اروح حمره رمضان 2027', goal:'-', category:'روحانية' },
-  { emoji:'📚', id:'h80', name:'كل ساعه من الدراسة قومي اتحركي 2 د ، استريتشات | انزلاق غضروفي', goal:'2 د', category:'إنتاجية' },
+  { emoji:'💧', id:'h1', name:'اشرب كوب مياه أول ما أصحى', goal:'-', category:'صحة' },
+  { emoji:'🚶‍♀️', id:'h2', name:'مشي 20 دقيقة', goal:'20 د', category:'صحة' },
+  { emoji:'😴', id:'h3', name:'أنام قبل الساعة 12', goal:'-', category:'صحة' },
+  { emoji:'📖', id:'h4', name:'قراءة 10 صفحات من كتاب', goal:'10 صفحات', category:'نفسية' },
+  { emoji:'🌸', id:'h5', name:'أكتب 3 حاجات ممتنة ليها', goal:'3', category:'نفسية' },
+  { emoji:'🧘‍♀️', id:'h6', name:'تأمل أو تنفس عميق', goal:'5 د', category:'نفسية' },
+  { emoji:'✅', id:'h7', name:'أراجع قائمة مهامي', goal:'-', category:'إنتاجية' },
+  { emoji:'📚', id:'h8', name:'مذاكرة أو تعلّم حاجة جديدة', goal:'1 ساعة', category:'إنتاجية' },
+  { emoji:'📵', id:'h9', name:'أول ساعة من اليوم من غير موبايل', goal:'-', category:'إنتاجية' },
+  { emoji:'💞', id:'h10', name:'أكلّم حد بحبه', goal:'-', category:'شخصي' },
 ];
 
 // أنواع النباتات [id, اسم, شكل, ندره, نوع الفتح, شرط, لون1, لون2, لون3]
